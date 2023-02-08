@@ -6,6 +6,9 @@
   "author": "Leonardo Adami",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "dev": "nodemon ./src/server.js"
+  },
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
