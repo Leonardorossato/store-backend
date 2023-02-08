@@ -1,10 +1,10 @@
 const express = require("express");
+const mongoConnection = require("./config/mongo.config");
 const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT;
-const mongoConnection = require("./config/mongo.config");
 
-app.mongoConnection = mongoConnection;
+app.listen(mongoConnection)
 
 
 app.listen(PORT, () => {
