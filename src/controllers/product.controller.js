@@ -9,4 +9,5 @@ class ProductController {
 
   static delete = async (req, res) => {};
 }
+
 module.exports = ProductController;
