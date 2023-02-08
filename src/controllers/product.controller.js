@@ -33,11 +33,11 @@ class ProductController {
 
   static update = async (req, res) => {
     try {
-      const { id } = req.params;
-      const product = await Product.findById({ id: id });
+      const {id} = req.params;
+      const product = await Product.findById({ _id: id });
       if (!product)
         return res.status(404).json(`Error to find product with id ${id}`);
-      await Product.findByIdAndUpdate(id, product);
+      await product.update(id, product);
       return res.status(200).json("Product updated successfully.");
     } catch (error) {
       return res.status(500).json("Error to update the product");
